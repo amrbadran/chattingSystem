@@ -1,0 +1,53 @@
+client is started listening on port 5555
+client is started listening on port 5554
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+client is started listening on port 5554
+a message was send from 127.0.0.1to 127.0.0.1
+archived pane was opened
+archived pane was existed
+a message was deleted
+archived pane was opened
+archived pane was existed
+archived pane was opened
+a message restored from a archived to a chat (2024-10-24 20:07:00 [Me:5555] hello)
+archived pane was existed
+archived pane was opened
+archived pane was existed
+a message was deleted
+archived pane was opened
+archived pane was existed
+client is started listening on port 5555
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+client is started listening on port 5554
+client is started listening on port 5555
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+client is started listening on port 5555
+client is started listening on port 5554
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+a message was deleted
+archived pane was opened
+archived pane was existed
+archived pane was opened
+archived pane was existed
+a message was deleted
+archived pane was opened
+archived pane was opened
+a message restored from a archived to a chat (2024-10-24 20:09:28 [Me:5555] hi)
+archived pane was existed
+archived pane was opened
+archived pane was existed
+a message was send from 127.0.0.1to 127.0.0.1
+a message was send from 127.0.0.1to 127.0.0.1
+archived pane was opened
+archived pane was existed
+all chat is deleted
+all chat is deleted

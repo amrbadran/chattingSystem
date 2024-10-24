@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.SocketException;
@@ -24,11 +25,17 @@ import java.util.concurrent.*;
 public class Client implements Initializable {
 
     public boolean server_started = false;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
     }
+
+    @FXML
+    private AnchorPane archive_pane;
+
+
 
     @FXML
     private ListView<Label> archivedMessages;
@@ -55,9 +62,11 @@ public class Client implements Initializable {
     @FXML
     void onClearConversation(ActionEvent event) {
         chat.getItems().clear();
+        new FileHandler().writeToFile("all chat is deleted");
     }
 
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
     @FXML
     void onDeleteMessage(ActionEvent event) {
         Label selectedLabel = chat.getSelectionModel().getSelectedItem();
@@ -68,15 +77,19 @@ public class Client implements Initializable {
             scheduler.schedule(() -> {
                 Platform.runLater(() -> archivedMessages.getItems().remove(selectedLabel));
             }, 15, TimeUnit.SECONDS);
+
+            new FileHandler().writeToFile("a message was deleted");
         }
+
     }
 
     @FXML
     void onListen(ActionEvent event) throws SocketException {
 
-        UDPServer server = new UDPServer(Integer.parseInt(userPort.getText().trim()),chat);
+        UDPServer server = new UDPServer(Integer.parseInt(userPort.getText().trim()), chat);
         server.start();
         server_started = true;
+        new FileHandler().writeToFile("client is started listening on port "+ userPort.getText());
     }
 
     @FXML
@@ -90,13 +103,13 @@ public class Client implements Initializable {
                 userIp.getText(),
                 userPort.getText(),
                 new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())
-                );
+        );
 
         client.sendMessage(m.toString());
 
         m.setSender("Me");
         chat.getItems().add(Helper.formatMessage(m.toString()));
-
+        new FileHandler().writeToFile("a message was send from " + userIp.getText() + "to " + destIp.getText());
     }
 
     @FXML
@@ -104,4 +117,29 @@ public class Client implements Initializable {
 
     }
 
+    @FXML
+    void onRestoreMessage(ActionEvent event) {
+        Label selectedLabel = archivedMessages.getSelectionModel().getSelectedItem();
+        if (selectedLabel != null) {
+            chat.getItems().add(selectedLabel);
+            archivedMessages.getItems().remove(selectedLabel);
+
+        }
+        new FileHandler().writeToFile("a message restored from a archived to a chat (" + selectedLabel.getText() + ")");
+    }
+
+
+    @FXML
+    void onExitPane(ActionEvent event) {
+        archive_pane.setVisible(false);
+
+        new FileHandler().writeToFile("archived pane was existed");
+    }
+
+
+    @FXML
+    void onOpenArchive(ActionEvent event) {
+        archive_pane.setVisible(true);
+        new FileHandler().writeToFile("archived pane was opened");
+    }
 }

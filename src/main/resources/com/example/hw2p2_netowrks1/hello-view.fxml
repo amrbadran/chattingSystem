@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hw2p2_netowrks1.Client">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hw2p2_netowrks1.Client">
    <children>
       <AnchorPane layoutX="117.0" layoutY="20.0" prefHeight="142.0" prefWidth="406.0">
          <children>
@@ -22,14 +22,21 @@
             <Button layoutX="58.0" layoutY="115.0" mnemonicParsing="false" onAction="#onListen" prefHeight="26.0" prefWidth="76.0" text="Listen" />
          </children>
       </AnchorPane>
-      <ListView fx:id="chat" layoutX="306.0" layoutY="195.0" prefHeight="200.0" prefWidth="386.0" />
-      <ListView fx:id="archivedMessages" layoutX="19.0" layoutY="195.0" prefHeight="273.0" prefWidth="262.0" />
-      <Label layoutX="20.0" layoutY="174.0" text="Archived Messages" />
-      <Label layoutX="306.0" layoutY="174.0" text="Chat" />
-      <TextArea fx:id="message" layoutX="306.0" layoutY="427.0" prefHeight="90.0" prefWidth="386.0" />
-      <Button layoutX="589.0" layoutY="539.0" mnemonicParsing="false" onAction="#onSend" prefHeight="26.0" prefWidth="102.0" text="Send" />
-      <Button layoutX="454.0" layoutY="539.0" mnemonicParsing="false" onAction="#onTest" prefHeight="26.0" prefWidth="102.0" text="Test" />
-      <Button layoutX="148.0" layoutY="492.0" mnemonicParsing="false" onAction="#onClearConversation" prefHeight="26.0" prefWidth="122.0" text="Clear Conversation" />
-      <Button layoutX="14.0" layoutY="492.0" mnemonicParsing="false" onAction="#onDeleteMessage" prefHeight="26.0" prefWidth="122.0" text="Delete Message" />
+      <ListView fx:id="chat" layoutX="186.0" layoutY="195.0" prefHeight="200.0" prefWidth="438.0" />
+      <Label layoutX="186.0" layoutY="175.0" text="Chat" />
+      <TextArea fx:id="message" layoutX="186.0" layoutY="427.0" prefHeight="90.0" prefWidth="438.0" />
+      <Button layoutX="519.0" layoutY="539.0" mnemonicParsing="false" onAction="#onSend" prefHeight="26.0" prefWidth="102.0" text="Send" />
+      <Button layoutX="394.0" layoutY="539.0" mnemonicParsing="false" onAction="#onTest" prefHeight="26.0" prefWidth="102.0" text="Test" />
+      <Button layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#onClearConversation" prefHeight="26.0" prefWidth="122.0" text="Clear Conversation" />
+      <Button layoutX="25.0" layoutY="218.0" mnemonicParsing="false" onAction="#onDeleteMessage" prefHeight="26.0" prefWidth="122.0" text="Delete Message" />
+      <AnchorPane fx:id="archive_pane" layoutX="99.0" layoutY="69.0" prefHeight="436.0" prefWidth="462.0" style="-fx-background-color: #fff;" visible="false">
+         <children>
+            <ListView fx:id="archivedMessages" layoutX="90.0" layoutY="67.0" prefHeight="301.0" prefWidth="295.0" />
+            <Label layoutX="90.0" layoutY="44.0" text="Archived Messages" />
+            <Button layoutX="261.0" layoutY="386.0" mnemonicParsing="false" onAction="#onRestoreMessage" prefHeight="26.0" prefWidth="122.0" text="Restore Message" />
+            <Button layoutX="391.0" layoutY="17.0" mnemonicParsing="false" onAction="#onExitPane" prefHeight="26.0" prefWidth="50.0" text="Exit" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#onOpenArchive" prefHeight="26.0" prefWidth="122.0" text="Archived Messages" />
    </children>
 </AnchorPane>
