@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#onSomeEvent" onMouseMoved="#onEvent" prefHeight="596.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hw2p2_netowrks1.Client">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onInputMethodTextChanged="#onSomeEvent" onMouseMoved="#onEvent" prefHeight="596.0" prefWidth="733.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hw2p2_netowrks1.Client">
    <children>
-      <AnchorPane layoutX="51.0" layoutY="7.0" prefHeight="183.0" prefWidth="200.0">
+      <AnchorPane layoutX="51.0" layoutY="7.0" prefHeight="179.0" prefWidth="200.0">
          <children>
             <Label layoutX="23.0" layoutY="5.0" text="Username" />
             <Label layoutX="25.0" layoutY="64.0" text="Password" />
@@ -21,15 +21,15 @@
             <PasswordField fx:id="password" layoutX="24.0" layoutY="92.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="287.0" layoutY="20.0" prefHeight="142.0" prefWidth="406.0">
+      <AnchorPane layoutX="287.0" layoutY="19.0" prefHeight="143.0" prefWidth="406.0">
          <children>
-            <Label layoutX="22.0" layoutY="-3.0" text="IP Address" />
+            <Label layoutX="22.0" layoutY="-1.0" text="IP Address" />
             <Label layoutX="26.0" layoutY="55.0" text="Port" />
-            <Label layoutX="217.0" layoutY="-3.0" text="Server IP" />
+            <Label layoutX="217.0" layoutY="-1.0" text="Server IP" />
             <Label layoutX="217.0" layoutY="55.0" text="Server Port" />
-            <TextField fx:id="userIp" layoutX="20.0" layoutY="14.0" />
+            <TextField fx:id="userIp" layoutX="20.0" layoutY="16.0" />
             <TextField fx:id="userPort" layoutX="20.0" layoutY="84.0" />
-            <TextField fx:id="serverIp" layoutX="210.0" layoutY="14.0" text="127.0.0.1" />
+            <TextField fx:id="serverIp" layoutX="210.0" layoutY="17.0" text="127.0.0.1" />
             <TextField fx:id="serverPort" layoutX="210.0" layoutY="83.0" text="5555" />
          </children>
       </AnchorPane>

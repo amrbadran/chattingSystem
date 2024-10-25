@@ -1,0 +1,29 @@
+Button{
+    -fx-background-color: green;
+    -fx-border-color: green;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-cursor: pointer;
+}
+
+Button:hover{
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-text-fill: green;
+}
+AnchorPane{
+    -fx-background-color: #222;
+}
+Label{
+    -fx-text-fill: white;
+}
+ComboBox{
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+
+TextField , PasswordField{
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
