@@ -51,3 +51,10 @@ archived pane was opened
 archived pane was existed
 all chat is deleted
 all chat is deleted
+archived pane was opened
+archived pane was opened
+archived pane was existed
+archived pane was opened
+archived pane was existed
+archived pane was opened
+archived pane was existed

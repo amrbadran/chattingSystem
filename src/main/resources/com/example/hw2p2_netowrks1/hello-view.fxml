@@ -29,7 +29,8 @@
       <Button layoutX="394.0" layoutY="539.0" mnemonicParsing="false" onAction="#onTest" prefHeight="26.0" prefWidth="102.0" text="Test" />
       <Button layoutX="25.0" layoutY="275.0" mnemonicParsing="false" onAction="#onClearConversation" prefHeight="26.0" prefWidth="122.0" text="Clear Conversation" />
       <Button layoutX="25.0" layoutY="218.0" mnemonicParsing="false" onAction="#onDeleteMessage" prefHeight="26.0" prefWidth="122.0" text="Delete Message" />
-      <AnchorPane fx:id="archive_pane" layoutX="99.0" layoutY="69.0" prefHeight="436.0" prefWidth="462.0" style="-fx-background-color: #fff;" visible="false">
+      <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#onOpenArchive" prefHeight="26.0" prefWidth="122.0" text="Archived Messages" />
+      <AnchorPane fx:id="archive_pane" layoutX="99.0" layoutY="69.0" prefHeight="436.0" prefWidth="462.0" style="-fx-border-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px;" visible="false">
          <children>
             <ListView fx:id="archivedMessages" layoutX="90.0" layoutY="67.0" prefHeight="301.0" prefWidth="295.0" />
             <Label layoutX="90.0" layoutY="44.0" text="Archived Messages" />
@@ -37,6 +38,5 @@
             <Button layoutX="391.0" layoutY="17.0" mnemonicParsing="false" onAction="#onExitPane" prefHeight="26.0" prefWidth="50.0" text="Exit" />
          </children>
       </AnchorPane>
-      <Button layoutX="25.0" layoutY="335.0" mnemonicParsing="false" onAction="#onOpenArchive" prefHeight="26.0" prefWidth="122.0" text="Archived Messages" />
    </children>
 </AnchorPane>
