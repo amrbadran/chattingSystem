@@ -47,4 +47,4 @@ All user actions are logged in a log file (activity.log).
 - Multithreading (Each Client has TCP Thread Server running)
 
 ## 📸 GUI Preview
-![ScreenShot][screenshot.PNG]
+![ScreenShot](screenshot.PNG)
