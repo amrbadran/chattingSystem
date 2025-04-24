@@ -11,7 +11,7 @@ This is a Peer-to-Peer Chat Application developed in Java with a user-friendly G
 
 - Functional buttons for chat management.
 
-###🕒 Timestamp on all messages (sent & received).
+### 🕒 Timestamp on all messages (sent & received).
 
 ### 🎨 Color-coded messages:
 
@@ -38,13 +38,15 @@ All user actions are logged in a log file (activity.log).
 🛠️ Technologies Used
 - Java FX for GUI
 
+- CSS for designing JAVAFX 
+
 - UDP Socket Programming
 
 - TCP Socket Programming
 
 - File I/O for logging
 
-- Multithreading (Each Client has TCP Thread Server running)
+- Multithreading (Each Client has UDP Thread Server running)
 
 ## 📸 GUI Preview
 ![ScreenShot](screenshot.PNG)
